@@ -52,6 +52,8 @@ const reducer = (state = initialState, action)=>{
     }
 }
 
+export default reducer;
+
 //Task List:
 //1. Adds the following state values into the initialState:
 //  - an array of smurfs
