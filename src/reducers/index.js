@@ -19,7 +19,7 @@ const reducer = (state = initialState, action)=>{
             return {
                 ...state,
                 loading: true,
-                error: ''
+                errMessage: ''
             };
         case FETCHING_SUCCESS:
             return{
@@ -45,7 +45,7 @@ const reducer = (state = initialState, action)=>{
         case(ERROR):
             return({
                 ...state,
-                error:action.payload
+                errMessage:action.payload
             })
         default:
             return state;

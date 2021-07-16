@@ -74,9 +74,9 @@ In this challenge, you are to build a Smurfs village database utilizing Redux as
 #### components/SmurfList.js
   Connect this component to redux, **passing in your smurf array and loading status state values.** 
   
-  * [ ] Connect the smurfs and loading state values to the SmurfList component.
-  * [ ] Replace the single Smurf component instance with a map return a Smurf component for each entry in the smurfs list.
-  * [ ] Replace the static isLoading variable with the state loading variable.
+  * [X] Connect the smurfs and loading state values to the SmurfList component.
+  * [X] Replace the single Smurf component instance with a map return a Smurf component for each entry in the smurfs list.
+  * [X] Replace the static isLoading variable with the state loading variable.
 
 #### components/Smurf.js
   You do not need to modify this component.
@@ -84,10 +84,10 @@ In this challenge, you are to build a Smurfs village database utilizing Redux as
 #### components/AddForm.js
   Connect this component to redux **passing in your error message state value, setError action and addSmurf action.** Complete the form handling code.
 
-  * [ ] Connect the errorMessage, setError and addSmurf actions to the AddForm component.
-  * [ ] Replace all instances of the errorMessage static variable with your error message state value. 
-  * [ ] Within the handleSubmit function, replace the static assignment to errorMessage with a call to the setError action. Test that an error is displayed when this validation code fails.
-  * [ ] Within the handleSubmit function, call your addSmurf action with the smurf name, position, nickname and summury passed as arguments. Test that a smurf is correctly added to when the form is submitted.
+  * [X] Connect the errorMessage, setError and addSmurf actions to the AddForm component.
+  * [X] Replace all instances of the errorMessage static variable with your error message state value. 
+  * [X] Within the handleSubmit function, replace the static assignment to errorMessage with a call to the setError action. Test that an error is displayed when this validation code fails.
+  * [X] Within the handleSubmit function, call your addSmurf action with the smurf name, position, nickname and summury passed as arguments. Test that a smurf is correctly added to when the form is submitted.
 
   **Notes:**
 
@@ -167,6 +167,19 @@ Example of object created in Smurf DB:
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers to the questions within `interview_answers.md` file. These will not be counted as a part of your sprint score but will be helpful for preparing you for your endorsement interview, and enhancing overall understanding.
 
 1. What problem does the context API help solve?
+
+Connecting State without Redux in a simpler way, and you connect multiple contexts to different componenets.
+
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+First actions are when you set up code statements that dispatch different commands to the reducer depending on what function you invoke elsewhere. It sends a type and a payload to the reducer to complete an action.
+Next a reducer as I explained before, takes all sorts of actions and on one page reduces it down to code functionality depending on which case you send in.
+Finally, the Store is setting up that storage of state and actions so when you connect a component to something, its connecting to that. You must wrap it around the <App> for accessing it anywhere within the app.
+
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
+
+It is a middleware that can do many things in between code processing to the store. It specifically returns funtions though so action creator must prepare for that.
+
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+
+Oh god 1000000% Context API. Not only does it make sense, it works beautifully. Its elegant syntax is easy to apply without all the rubbish of Redux, and it is CLEAN. I make so many mistakes in all of Redux's set up and I get lost in the code.
